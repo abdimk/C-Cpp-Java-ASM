@@ -1,0 +1,2 @@
+hello
+curl https://github.com/abdimk/C/blob/mainb/w3questions/Array/separte_even_odd.cpp
