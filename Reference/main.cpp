@@ -2,22 +2,23 @@
 
 using namespace std;
 
+
+enum Days:char
+{
+    A='M',B='T',C='W',D='T',E='F'
+};
+
 int main()
 {
-    int num{200};
-    int &ref{num};
-
-    cout<<"------------------------"<<endl;
-    cout<<num<<endl;
-    cout<<ref<<endl;
-    //both are the same
-
-    cout<<"-------------------------"<<endl;
-
-    ref = 400;
-
-    //the values will change 
-    cout<<ref<<endl;
-    cout<<num<<endl;
+    char ch;
+    int *car_ptr{&ch};
+    cout<<"Enter the starting date:";
+    cin>>*car_ptr;
+    
+    Days value = B;
+    if(value == (*car_ptr)){
+        cout<<"Hello world, its Tuesday"<<endl;
+    }
+    
     return 0;
 }
