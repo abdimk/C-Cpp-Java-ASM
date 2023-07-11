@@ -3,6 +3,10 @@
 compile-time/eary binding / static binding 
 Run-time / late binding /dynamic binding
 
+
+uisng final -> stops a class or a function from overrideing 
+
+
 */
 
 #include <iostream>
