@@ -1,35 +1,39 @@
 #include <iostream>
+#include <stdlib.h>
+#include <string>
 
-using namespace std;
+using std::cout,std::cin,std::endl;
 
+class Player{
+    // atributes
+public:
+    std::string name {"player"};
+    int health{0};
+    int xp{3};
+
+    // methods
+    void talk(std::string word){cout<<name<<" says "<<word<<endl;}
+    bool is_dead();//
+};
 
 class Account{
-    std::string name;
+    // atributes 
+    std::string name{"Account"};
     int balance{0};
-    
-    //atriblutes 
-public:
-    void curent_balance(){
-        cout<<balance<<endl;
-    }
-    void deposit(int amount){
-        balance+=amount;
-    }
 
-    void withdraw(int amount){
-        balance-=amount;
-    }
+    //methiods
+    bool withdraw(double bal){balance+=bal;cout<<"Inbalance "<<endl;}
+    bool deposite(double){balance+=bal;cout<<"Indeposite "<<endl;}
 };
-int main(){
 
-    Account *abdisa = new Account;
+int main()
+{
+    Player hero;
+    Player frank;
 
-    abdisa -> curent_balance();
-    abdisa -> deposit(1000);
-    abdisa -> curent_balance(); 
-
-
-    delete abdisa;
-
-    
+    Player* enemy = (Player *)malloc(sizeof(Player));
+    enemy->name = "abdisa";
+    enemy->talk("Here There!");
+    cout<<(enemy->name)<<endl;
+    return 0;
 }
